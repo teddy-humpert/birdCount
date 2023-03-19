@@ -131,9 +131,9 @@ export default {
 
 <style scoped>
 .template {
-  font-family: sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   width: 100%;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .bird-container {
@@ -171,7 +171,7 @@ export default {
 
 .bird-container > .container-collapsed > .right > i {
   margin-left: 5px;
-  padding: 15px 20px 15px 20px;
+  padding: 10px 15px 10px 15px;
   border-radius: 5px;
 }
 
@@ -208,7 +208,7 @@ export default {
 }
 
 #minus {
-  background-color: rgb(207, 25, 25);
+  background-color: rgb(187, 20, 20);
 }
 
 #plus {
