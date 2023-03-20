@@ -59,7 +59,7 @@
 import BirdListVue from "./BirdList.vue";
 export default {
   name: "count-list",
-  props: ["myBirds"],
+  // props: ["myBirds"],
   data() {
     return {
       birdList: [],
