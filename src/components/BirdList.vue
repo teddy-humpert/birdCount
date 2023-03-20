@@ -4,29 +4,30 @@
   <div class="template">
     <div class="libraryHeader">
       <h1 id="libraryHeader">Library</h1>
-      <form id="form" role="search" class="right" >
+      <form id="form" role="search" class="right">
         <input type="text" id="query" placeholder="Search..." />
       </form>
     </div>
     <!-- <count-list :birds="birds" /> -->
     <div v-for="(bird, index) in birds" :key="index" class="bird-container">
       <div class="container-collapsed">
-        <p>
-          <strong>{{ bird.name }}</strong>
-          <!-- <strong>{{ bird.isCounted }}</strong> -->
-        </p>
         <i
-          class="fa fa-angle-double-down"
+          class="fa fa-angle-double-right"
           @click="bird.expanded = !bird.expanded"
           v-if="!bird.expanded"
         ></i>
         <p id="expandText" v-if="!bird.expanded"></p>
         <i
-          class="fa fa-angle-double-up"
+          class="fa fa-angle-double-down"
           @click="bird.expanded = !bird.expanded"
           v-if="bird.expanded"
         ></i>
         <p id="collapseText" v-if="bird.expanded"></p>
+        <p>
+          <strong>{{ bird.name }}</strong>
+          <!-- <strong>{{ bird.isCounted }}</strong> -->
+        </p>
+
         <!-- <p id="currentCount" class="right">
           <strong>Count: </strong>{{ bird.count }}
         </p> -->
@@ -36,13 +37,15 @@
         </div>
       </div>
       <div class="container-expanded" v-if="bird.expanded">
-        <div class="female-image">
-          <img :src="bird.femaleImgSrc" id="female-image" />
-          <p class="image-ident">Female</p>
-        </div>
-        <div class="male-image">
-          <img :src="bird.maleImgSrc" id="male-image" />
-          <p class="image-ident">Male</p>
+        <div id="images">
+          <div class="female-image">
+            <img :src="bird.femaleImgSrc" id="female-image" />
+            <p class="image-ident">Female</p>
+          </div>
+          <div class="male-image">
+            <img :src="bird.maleImgSrc" id="male-image" />
+            <p class="image-ident">Male</p>
+          </div>
         </div>
         <p class="description">
           <strong>Description:</strong> {{ bird.description }}
@@ -247,7 +250,6 @@ export default {
   font-size: 18px;
 }
 
-
 .libraryHeader {
   display: flex;
   flex-direction: row;
@@ -276,9 +278,9 @@ export default {
 }
 
 .bird-container > .container-collapsed > i {
-  margin-left: 20px;
-  position: fixed;
-  margin-left: 30%;
+  margin-right: 10px;
+  /* position: fixed;
+  margin-left: 30%; */
 }
 
 .right {
@@ -303,7 +305,7 @@ export default {
 }
 
 .bird-container > .container-expanded {
-  display: grid;
+  /* display: grid; */
   grid-template-columns: 1fr 1fr;
   row-gap: 0px;
   column-gap: 0px;
@@ -342,15 +344,21 @@ export default {
   background-color: rgb(85, 100, 85);
 }
 
+#images {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+}
+
 .female-image {
   grid-area: female-image;
-  margin-left: 50px;
+  margin-left: 0px;
 }
 
 .male-image {
   grid-area: male-image;
-  margin-right: 50px;
-  margin-left: auto;
+  margin-left: 20px;
 }
 
 #female-image,
