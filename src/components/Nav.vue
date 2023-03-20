@@ -1,10 +1,13 @@
-<template>
+<template class="template">
   <nav class="box">
-    <i class="fa fa-bars" @click="toggleNav"></i>
+    <div class="menu"  @click="toggleNav">
+      <i class="fa fa-bars"></i>
+      <p>Menu</p>
+    </div>
     <div class="dropBar" v-show="showNav">
       <a href="#">Home</a>
-      <a href="#">Counts</a>
-      <a href="#" class="push">User</a>
+      <a href="#">Past Counts</a>
+      <a href="#">User</a>
     </div>
     <div class="productsSearch-container">
       <form id="form" role="search" class="right">
@@ -30,10 +33,15 @@ export default {
 </script>
 
 <style scoped>
+.template {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  width: 100%;
+  font-size: 14px;
+}
+
 .box {
   position: relative;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -43,13 +51,33 @@ export default {
   font-size: 16px;
 }
 
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu > i {
+  margin-right: 5px;
+}
+
 .dropBar {
   position: absolute;
   top: 100%;
   left: 0;
   z-index: 1;
+  background-color: #fff;
   border: 1px solid #ccc;
+  display: flex;
   padding: 10px;
+  flex-direction: column;
+}
+
+.dropBar > a {
+  text-decoration: none;
+  color: black;
+  text-align: left;
+  padding: 5px 2px 5px 2px;
 }
 
 .show {

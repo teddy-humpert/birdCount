@@ -7,18 +7,21 @@
   />
   <div id="app">
     <Nav />
+    <CountList />
     <BirdList />
   </div>
 </template>
 
 <script>
 import Nav from "./components/Nav.vue";
+import CountList from "./components/CountList.vue";
 import BirdList from "./components/BirdList.vue";
 
 export default {
   name: "App",
   components: {
     Nav,
+    CountList,
     BirdList,
     
   },
