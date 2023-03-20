@@ -8,12 +8,15 @@
       <h1 id="countHeader">Count</h1>
     </div>
     <div
-      v-for="bird in $store.state.birds"
+      v-for="bird in countedBirds"
       :key="bird.id"
       class="bird-container"
     >
       <!-- <div v-for="bird in birdLibrary" :key="bird.id" class="bird-container"> -->
       <div class="container-collapsed">
+        <i
+          class="fa-fa-xing"
+        ></i>
         <p>
           <strong>{{ bird.name }}</strong>
           <!-- <strong>{{ bird.isCounted }}</strong> -->
@@ -39,7 +42,7 @@
           <i class="fa fa-minus" id="minus" @click="decrementCount(bird)"></i>
         </div>
       </div>
-      <div class="container-expanded" v-if="bird.expanded">
+      <!-- <div class="container-expanded" v-if="bird.expanded">
         <div class="female-image">
           <img :src="bird.femaleImgSrc" id="female-image" />
           <p class="image-ident">Female</p>
@@ -54,7 +57,7 @@
         <p class="habitatBehavior">
           <strong>Habitat & Behavior:</strong> {{ bird.habitatBehavior }}
         </p>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -108,7 +111,7 @@ export default {
   },
   computed: {
     countedBirds() {
-      return this.birdLibrary.filter((bird) => bird.isCounted === true);
+      return this.$store.state.birds.filter((bird) => bird.isCounted === true);
     },
   },
 };

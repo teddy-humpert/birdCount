@@ -30,14 +30,14 @@
         <p id="collapseText" v-if="bird.expanded"></p>
         <p>
           <strong>{{ bird.name }}</strong>
-          <!-- <strong>{{ bird.isCounted }}</strong> -->
+          <strong>{{ bird.isCounted }}</strong>
         </p>
 
         <!-- <p id="currentCount" class="right">
           <strong>Count: </strong>{{ bird.count }}
         </p> -->
         <div class="right">
-          <i id="addToCount" @click="toggleCounted(index)">Add to Count</i>
+          <i id="addToCount" @click="toggleCounted(bird)"> {{ bird.isCounted ? 'Remove from Count' : 'Add to Count' }}</i>
           <!-- <i class="fa fa-minus" id="minus" @click="decrementCount(index)"></i> -->
         </div>
       </div>
@@ -237,8 +237,8 @@ export default {
         this.birds[index].count--;
       }
     },
-    toggleCounted(index) {
-      this.birds[index].isCounted = !this.birds[index].isCounted;
+    toggleCounted(bird) {
+      bird.isCounted = !bird.isCounted;
     },
   },
 };
