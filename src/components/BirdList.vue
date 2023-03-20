@@ -9,7 +9,12 @@
       </form>
     </div>
     <!-- <count-list :birds="birds" /> -->
-    <div v-for="(bird, index) in birds" :key="index" class="bird-container">
+    <div
+      v-for="bird in $store.state.birds"
+      :key="bird.id"
+      class="bird-container"
+    >
+    <!-- <div v-for="(bird, index) in birds" :key="index" class="bird-container"> -->
       <div class="container-collapsed">
         <i
           class="fa fa-angle-double-right"

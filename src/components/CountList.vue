@@ -7,8 +7,12 @@
     <div class="countHeader">
       <h1 id="countHeader">Count</h1>
     </div>
-
-    <div v-for="bird in birdLibrary" :key="bird.id" class="bird-container">
+    <div
+      v-for="bird in $store.state.birds"
+      :key="bird.id"
+      class="bird-container"
+    >
+      <!-- <div v-for="bird in birdLibrary" :key="bird.id" class="bird-container"> -->
       <div class="container-collapsed">
         <p>
           <strong>{{ bird.name }}</strong>
@@ -26,11 +30,11 @@
           v-if="bird.expanded"
         ></i> -->
         <p id="collapseText" v-if="bird.expanded">Collapse</p>
-        
+
         <div class="right">
           <p id="currentCount" class="right">
-          <strong>Count: </strong>  {{ bird.count }}
-        </p>
+            <strong>Count: </strong> {{ bird.count }}
+          </p>
           <i class="fa fa-plus" id="plus" @click="incrementCount(bird)"></i>
           <i class="fa fa-minus" id="minus" @click="decrementCount(bird)"></i>
         </div>
