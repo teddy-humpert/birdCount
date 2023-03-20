@@ -9,13 +9,22 @@
       <a href="#">Past Counts</a>
       <a href="#">User</a>
     </div>
-    <div class="productsSearch-container">
-      <form id="form" role="search" class="right">
-        <input type="text" id="query" name="q" placeholder="Search..." />
-      </form>
-      <!-- <div class="searchedBird" v-for="bird in filteredList()" :key="bird">
+    <form id="form" role="search" class="right">
+      <input
+        type="text"
+        id="query"
+        name="q"
+        placeholder="Search..."
+        @click="toggleSearch"
+        autocomplete="off"
+      />
+    </form>
+    <div id="searchResults" v-show="showSearchResults">
+      <div class="searchedBird" v-for="bird in $store.state.birds" :key="bird">
         <p>{{ bird.name }}</p>
-      </div> -->
+        <i id="addToCount" @click="toggleCounted(bird)">
+          {{ bird.isCounted ? "Remove" : "Add" }}</i>
+      </div>
     </div>
 
     <!-- drop down select  -->
@@ -36,11 +45,19 @@ export default {
   data() {
     return {
       showNav: false,
+      showSearchResults: false,
     };
   },
+  computed: {},
   methods: {
     toggleNav() {
       this.showNav = !this.showNav;
+    },
+    toggleSearch() {
+      this.showSearchResults = !this.showSearchResults;
+    },
+    toggleCounted(bird) {
+      bird.isCounted = !bird.isCounted;
     },
   },
 };
@@ -93,6 +110,34 @@ export default {
   display: flex;
   padding: 10px;
   flex-direction: column;
+}
+
+#searchResults {
+  /* right: 0; */
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+.searchedBird {
+  /* position: absolute; */
+  padding: 5px;
+}
+
+.searchedBird > i {
+  position: relative;
+  z-index: 100;
+  border: 2px solid red;
+  font-style: normal;
+  border: 1px solid rgb(85, 100, 85);
+  padding: 5px 8px 5px 8px;
+  border-radius: 40px;
 }
 
 .dropBar > a {
