@@ -14,6 +14,7 @@
         <input type="text" id="query" name="q" placeholder="Search..." />
       </form>
     </div>
+    
   </nav>
 </template>
 
@@ -44,6 +45,14 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+#query {
+  border-radius: 40px;
+  border: 1px solid lightgray;
+
+  height: 30px;
+  padding-left: 5px;
 }
 
 #form {

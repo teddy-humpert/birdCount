@@ -60,10 +60,11 @@
       </div> -->
     </div>
   </div>
+  
 </template>
 
 <script>
-import BirdListVue from "./BirdList.vue";
+// import BirdListVue from "./BirdList.vue";
 export default {
   name: "count-list",
   // props: ["myBirds"],
@@ -92,9 +93,9 @@ export default {
       },
     };
   },
-  mounted() {
-    this.birdLibrary = BirdListVue.data().birds;
-  },
+  // mounted() {
+  //   this.birdLibrary = BirdListVue.data().birds;
+  // },
   methods: {
     incrementCount(bird) {
       bird.count++;
@@ -136,6 +137,13 @@ export default {
 
 .bird-container {
   border-bottom: 1px solid lightgray;
+  padding: 5px 0px 5px 0px;
+}
+
+.bird-container:last-child {
+  border-bottom: 0px solid lightgray;
+  padding: 5px 0px 5px 0px;
+  margin-bottom: 10px;
 }
 
 .bird-container > .container-collapsed {
@@ -156,7 +164,7 @@ export default {
   margin-right: 5px;
   /*align-self:flex-end;*/
   margin-left: auto;
-  color: white;
+  color: black;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -172,7 +180,7 @@ export default {
 .bird-container > .container-collapsed > .right > i {
   margin-left: 5px;
   padding: 10px 15px 10px 15px;
-  border-radius: 5px;
+  border-radius: 40px;
 }
 
 .bird-container > .container-expanded {
@@ -208,11 +216,11 @@ export default {
 }
 
 #minus {
-  background-color: rgb(187, 20, 20);
+  border: 1px solid rgb(187, 20, 20);
 }
 
 #plus {
-  background-color: rgb(14, 112, 14);
+  border: 1px solid rgb(14, 112, 14);
 }
 
 .female-image {

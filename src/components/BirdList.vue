@@ -8,13 +8,14 @@
         <input type="text" id="query" placeholder="Search..." />
       </form>
     </div>
+    
     <!-- <count-list :birds="birds" /> -->
     <div
       v-for="bird in $store.state.birds"
       :key="bird.id"
       class="bird-container"
     >
-    <!-- <div v-for="(bird, index) in birds" :key="index" class="bird-container"> -->
+      <!-- <div v-for="(bird, index) in birds" :key="index" class="bird-container"> -->
       <div class="container-collapsed">
         <i
           class="fa fa-angle-double-right"
@@ -30,14 +31,16 @@
         <p id="collapseText" v-if="bird.expanded"></p>
         <p>
           <strong>{{ bird.name }}</strong>
-          <strong>{{ bird.isCounted }}</strong>
+          <!-- <strong>{{ bird.isCounted }}</strong> -->
         </p>
 
         <!-- <p id="currentCount" class="right">
           <strong>Count: </strong>{{ bird.count }}
         </p> -->
         <div class="right">
-          <i id="addToCount" @click="toggleCounted(bird)"> {{ bird.isCounted ? 'Remove from Count' : 'Add to Count' }}</i>
+          <i id="addToCount" @click="toggleCounted(bird)">
+            {{ bird.isCounted ? "Remove from Count" : "Add to Count" }}</i
+          >
           <!-- <i class="fa fa-minus" id="minus" @click="decrementCount(index)"></i> -->
         </div>
       </div>
@@ -68,10 +71,10 @@
 </template>
 
 <script>
-import CountList from "./CountList.vue";
+// import CountList from "./CountList.vue";
 // import { reactive } from "vue";
 export default {
-  components: { CountList },
+  // components: { CountList },
   name: "bird-list",
   // // setup() {
   // //   const myBirds = reactive([
@@ -270,8 +273,17 @@ export default {
   border-bottom: 1px solid lightgray;
 }
 
+#query {
+  border-radius: 40px;
+  border: 1px solid lightgray;
+
+  height: 30px;
+  padding-left: 5px;
+}
+
 .bird-container {
   border-bottom: 1px solid lightgray;
+  padding: 5px 0px 5px 0px;
 }
 
 .bird-container > .container-collapsed {
@@ -306,7 +318,7 @@ export default {
 .bird-container > .container-collapsed > .right > i {
   margin-left: 5px;
   padding: 10px 15px 10px 15px;
-  border-radius: 5px;
+  border-radius: 40px;
 }
 
 .bird-container > .container-expanded {
@@ -346,14 +358,15 @@ export default {
 }
 
 #addToCount {
-  background-color: rgb(85, 100, 85);
+  border: 1px solid rgb(85, 100, 85);
+  font-style: normal;
+  color: black;
 }
 
 #images {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-
 }
 
 .female-image {
@@ -370,6 +383,7 @@ export default {
 #male-image {
   height: 140px;
   border-radius: 5px;
+  border: 1px solid rgb(85, 100, 85);
 }
 
 .image-ident {
