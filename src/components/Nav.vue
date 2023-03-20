@@ -1,6 +1,6 @@
 <template class="template">
   <nav class="box">
-    <div class="menu"  @click="toggleNav">
+    <div class="menu" @click="toggleNav">
       <i class="fa fa-bars"></i>
       <p>Menu</p>
     </div>
@@ -13,8 +13,21 @@
       <form id="form" role="search" class="right">
         <input type="text" id="query" name="q" placeholder="Search..." />
       </form>
+      <!-- <div class="searchedBird" v-for="bird in filteredList()" :key="bird">
+        <p>{{ bird.name }}</p>
+      </div> -->
     </div>
-    
+
+    <!-- drop down select  -->
+    <!-- <div>
+    <select v-model="selectedBird">
+      <option disabled value="">Select a bird</option>
+      <option v-for="bird in $store.state.birds" :value="bird" :key="bird.id">{{ bird.name }}</option>
+    </select>
+    <div v-if="selectedBird">
+      <p><strong>{{ selectedBird.name }}</strong></p>
+     </div>
+  </div>  -->
   </nav>
 </template>
 
