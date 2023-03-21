@@ -17,13 +17,17 @@
         placeholder="Search..."
         @click="toggleSearch"
         autocomplete="off"
+        v-bind="searchQuery"
       />
     </form>
     <div id="searchResults" v-show="showSearchResults">
+      <!-- this'll be where vfor filteredBirds goes  -->
+      <!-- <div class="searchedBird" v-for="bird in filteredBirds" :key="bird"> -->
       <div class="searchedBird" v-for="bird in $store.state.birds" :key="bird">
         <p>{{ bird.name }}</p>
         <i id="addToCount" @click="toggleCounted(bird)">
-          {{ bird.isCounted ? "Remove" : "Add" }}</i>
+          {{ bird.isCounted ? "Remove" : "Add" }}</i
+        >
       </div>
     </div>
 
@@ -46,9 +50,24 @@ export default {
     return {
       showNav: false,
       showSearchResults: false,
+      searchQuery: "",
+      // allBirds: allBirds(),
     };
   },
-  computed: {},
+  computed: {
+    allBirds() {
+      return this.$store.state.birds;
+    },
+    // filteredBirds() {
+    //   if (this.searchQuery) {
+    //     return allBirds.filter((bird)=> {
+    //       return bird.name.startsWith(this.searchQuery);
+    //     })
+    //   } else {
+    //     return this.allBirds;
+    //   }
+    // }
+  },
   methods: {
     toggleNav() {
       this.showNav = !this.showNav;

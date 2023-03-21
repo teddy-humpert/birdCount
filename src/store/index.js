@@ -73,6 +73,90 @@ export default createStore({
         habitatBehavior:
           "The habitat for this wren, which is our only nonmigratory species, is thick underbrush and shrubbery in thickets, ravines, swamps, and residential areas. Typical foods include insects and spiders. The song is a loud, whistled tea-kettle, tea-kettle, tea-kettle, tea.",
       },
+      {
+        id: 6,
+        expanded: false,
+        count: 0,
+        isCounted: false,
+
+        name: "Downy Woodpecker",
+        femaleImgSrc: "imgs/carolinawren-female.jpg",
+        maleImgSrc: "imgs/carolinawren-male.jpg",
+        description:
+          "About the size of a sparrow, this species is the smallest, most abundant, and tamest of our woodpeckers. The downy (Picoides pubescens) is black and white and males have a bright red spot on the back of the head. The small downy is marked exactly like the larger, and much rarer, hairy woodpecker. The hairy, however, has a much larger bill as compared to the stubby bill of the downy.",
+        habitatBehavior:
+          "The downy's habitat may be anywhere a number of trees are found. This fairly common permanent resident is attracted to suet feeders in the winter. The song is a descending rattle. The call note, a sharp pik, is heard more frequently. Downy woodpeckers usually feed on insects and other arthropods, fruits, seeds, sap, and some cambium tissue.",
+      },
+      {
+        id: 7,
+        expanded: false,
+        count: 0,
+        isCounted: false,
+
+        name: "Eastern Phoebe",
+        femaleImgSrc: "imgs/carolinawren-female.jpg",
+        maleImgSrc: "imgs/carolinawren-male.jpg",
+        description:
+          "This sparrow-sized bird varies from grayish to brownish color with a light breast. There are no wing bars or eye-rings, although some immature phoebes do have wing bars. An excellent field trait for the phoebe is its tail-wagging habit.",
+        habitatBehavior:
+          "The Eastern phoebe is usually the first flycatcher to arrive in the spring and the last to leave in the fall. It is a fairly common summer resident. They are often seen near iron or stone bridges and farm buildings. Their preferred habitat is open woodland near water, where they feed on insects. Phoebes are named for their song a clear fee-bee, repeated many times. They primarily feed on insects.",
+      },
+      {
+        id: 8,
+        expanded: false,
+        count: 0,
+        isCounted: false,
+
+        name: "Hairy Woodpecker",
+        femaleImgSrc: "imgs/carolinawren-female.jpg",
+        maleImgSrc: "imgs/carolinawren-male.jpg",
+        description:
+          "Resembling a jumbo downy woodpecker, the hairy (Picoides villosus) is best told by its larger size, proportionately much bigger bill, and unspotted outer tail feathers.",
+        habitatBehavior:
+          "This species is much less tolerant of forest fragmentation than the downy woodpecker, and is generally confined to larger, older woodlands. The hairy woodpecker also has a much louder, more explosive call. When diving, it releases a drawn out rattling cry somewhat reminiscent of a belted kingfisher. Typical foods include insects and spiders.",
+      },
+      {
+        id: 9,
+        expanded: false,
+        count: 0,
+        isCounted: false,
+
+        name: "Northern Cardinal",
+        femaleImgSrc: "imgs/carolinawren-female.jpg",
+        maleImgSrc: "imgs/carolinawren-male.jpg",
+        description:
+          "The male cardinal is an unmistakable brilliant red with black facial markings and a crested head. Females also have a head crest, but overall are duller in coloration. Female cardinals are a grayish, brown-red with true red only on their wings, tail, and crest. The red bill is also a distinguishing characteristic. As with many other species of birds, the muted appearance makes the female cardinal less conspicuous to predators when nesting.",
+        habitatBehavior:
+          "Cardinals prefer a mixed habitat of woodlands, brush, and forest edges. They eat a variety of seeds that their thick, cone-shaped beak is well adapted to handling, as well as some insects. Cardinals do not migrate, but individuals may wander over a widespread area. As with most wildlife species, cardinals have a very short life span. Most cardinals live only one year or less; a two- or three-year-old bird is rare. The mulitple broods of young in a year help offset the loss of older birds in the population.",
+      },
+      {
+        id: 10,
+        expanded: false,
+        count: 0,
+        isCounted: false,
+
+        name: "Red-Bellied Woodpecker",
+        femaleImgSrc: "imgs/carolinawren-female.jpg",
+        maleImgSrc: "imgs/carolinawren-male.jpg",
+        description:
+          "The red-bellied woodpecker (Melanerpes carolinus) has a patch of red on the lower abdomen that is relatively small and very difficult to see at any distance. This robin-sized bird has a pale buffy-gray breast and black-and-white striped wings and back. On the male, the entire top of the head and neck is red, while the female is only red on the nape of the neck or back of the head.",
+        habitatBehavior:
+          "Found in forests, woodlots, and parks, the red-bellied is an uncommon permanent resident. This woodpecker, like the others, is beneficial because of the tremendous number of insects and larvae it consumes. It also eats nuts and berries. The call is a churr or a chaww.",
+      },
+      {
+        id: 11,
+        expanded: false,
+        count: 0,
+        isCounted: false,
+
+        name: "Red-Winged Blackbird",
+        femaleImgSrc: "imgs/carolinawren-female.jpg",
+        maleImgSrc: "imgs/carolinawren-male.jpg",
+        description:
+          "Females resemble sparrows, but have noticeable differences in size, habits, and bill shape. The male is black with bright red shoulder patches.",
+        habitatBehavior:
+          "This species inhabits all types of open habitats, roadsides, wet meadows, and cattail marshes. An abundant bird, red-winged blackbirds are one of the more obvious species along our roadsides. The males deliver their raucous conk-a-ree-onk songs while perching on fences, wires, and the tops of shrubs. Frequently they accompany their singing by flashing their brilliant red epaulets, which they display by folding their wings out and forward. These birds are most abundant in wetlands, where they eat seeds and insects.",
+      },
     ],
   },
   mutations: {
