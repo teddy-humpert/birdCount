@@ -1,4 +1,4 @@
-# bird-count-vue
+# bird-count
 
 ## Project setup
 ```
