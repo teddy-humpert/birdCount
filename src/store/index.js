@@ -80,8 +80,8 @@ export default createStore({
         isCounted: false,
 
         name: "Downy Woodpecker",
-        femaleImgSrc: "imgs/carolinawren-female.jpg",
-        maleImgSrc: "imgs/carolinawren-male.jpg",
+        femaleImgSrc: "imgs/downy-female.jpg",
+        maleImgSrc: "imgs/downy-male.jpg",
         description:
           "About the size of a sparrow, this species is the smallest, most abundant, and tamest of our woodpeckers. The downy (Picoides pubescens) is black and white and males have a bright red spot on the back of the head. The small downy is marked exactly like the larger, and much rarer, hairy woodpecker. The hairy, however, has a much larger bill as compared to the stubby bill of the downy.",
         habitatBehavior:
@@ -94,8 +94,8 @@ export default createStore({
         isCounted: false,
 
         name: "Eastern Phoebe",
-        femaleImgSrc: "imgs/carolinawren-female.jpg",
-        maleImgSrc: "imgs/carolinawren-male.jpg",
+        femaleImgSrc: "imgs/phoebe-female.jpg",
+        maleImgSrc: "imgs/phoebe-male.jpg",
         description:
           "This sparrow-sized bird varies from grayish to brownish color with a light breast. There are no wing bars or eye-rings, although some immature phoebes do have wing bars. An excellent field trait for the phoebe is its tail-wagging habit.",
         habitatBehavior:
@@ -108,8 +108,8 @@ export default createStore({
         isCounted: false,
 
         name: "Hairy Woodpecker",
-        femaleImgSrc: "imgs/carolinawren-female.jpg",
-        maleImgSrc: "imgs/carolinawren-male.jpg",
+        femaleImgSrc: "imgs/hairy-female.jpg",
+        maleImgSrc: "imgs/hairy-male.jpg",
         description:
           "Resembling a jumbo downy woodpecker, the hairy (Picoides villosus) is best told by its larger size, proportionately much bigger bill, and unspotted outer tail feathers.",
         habitatBehavior:
@@ -122,8 +122,8 @@ export default createStore({
         isCounted: false,
 
         name: "Northern Cardinal",
-        femaleImgSrc: "imgs/carolinawren-female.jpg",
-        maleImgSrc: "imgs/carolinawren-male.jpg",
+        femaleImgSrc: "imgs/cardinal-female.jpg",
+        maleImgSrc: "imgs/cardinal-male.jpg",
         description:
           "The male cardinal is an unmistakable brilliant red with black facial markings and a crested head. Females also have a head crest, but overall are duller in coloration. Female cardinals are a grayish, brown-red with true red only on their wings, tail, and crest. The red bill is also a distinguishing characteristic. As with many other species of birds, the muted appearance makes the female cardinal less conspicuous to predators when nesting.",
         habitatBehavior:
@@ -136,8 +136,8 @@ export default createStore({
         isCounted: false,
 
         name: "Red-Bellied Woodpecker",
-        femaleImgSrc: "imgs/carolinawren-female.jpg",
-        maleImgSrc: "imgs/carolinawren-male.jpg",
+        femaleImgSrc: "imgs/redbellied-female.jpg",
+        maleImgSrc: "imgs/redbellied-male.jpg",
         description:
           "The red-bellied woodpecker (Melanerpes carolinus) has a patch of red on the lower abdomen that is relatively small and very difficult to see at any distance. This robin-sized bird has a pale buffy-gray breast and black-and-white striped wings and back. On the male, the entire top of the head and neck is red, while the female is only red on the nape of the neck or back of the head.",
         habitatBehavior:
@@ -150,8 +150,8 @@ export default createStore({
         isCounted: false,
 
         name: "Red-Winged Blackbird",
-        femaleImgSrc: "imgs/carolinawren-female.jpg",
-        maleImgSrc: "imgs/carolinawren-male.jpg",
+        femaleImgSrc: "imgs/redwing-female.jpg",
+        maleImgSrc: "imgs/redwing-male.jpg",
         description:
           "Females resemble sparrows, but have noticeable differences in size, habits, and bill shape. The male is black with bright red shoulder patches.",
         habitatBehavior:

@@ -17,7 +17,8 @@
         placeholder="Search..."
         @click="toggleSearch"
         autocomplete="off"
-        v-bind="searchQuery"
+        v-bind="searchQuery" 
+        v-model="query"
       />
     </form>
     <div id="searchResults" v-show="showSearchResults">
@@ -51,6 +52,8 @@ export default {
       showNav: false,
       showSearchResults: false,
       searchQuery: "",
+      query: "",
+      // v-model 2way binding ...
       // allBirds: allBirds(),
     };
   },
@@ -59,9 +62,9 @@ export default {
       return this.$store.state.birds;
     },
     // filteredBirds() {
-    //   if (this.searchQuery) {
+    //   if (this.query) {
     //     return allBirds.filter((bird)=> {
-    //       return bird.name.startsWith(this.searchQuery);
+    //       return bird.name.startsWith(this.query);
     //     })
     //   } else {
     //     return this.allBirds;
